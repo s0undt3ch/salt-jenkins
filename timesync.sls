@@ -15,7 +15,7 @@ remove-drift-file:
   file.absent:
     - name: /var/lib/chrony/
     - require:
-      - cmd: stop-chrony
+      - service: stop-chrony
 {%- endif %}
 
 set-time-zone:
